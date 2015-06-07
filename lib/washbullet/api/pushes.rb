@@ -6,15 +6,15 @@ require 'washbullet/pushable/note'
 module Washbullet
   module API
     module Pushes
-      def push_note(receiver: nil, identifier: nil, params: {})
+      def push_note(:receiver => nil, :identifier => nil, :params => {})
         Washbullet::Pushable::Note.push(self, receiver, identifier, params)
       end
 
-      def push_link(receiver: nil, identifier: nil, params: {})
+      def push_link(:receiver => nil, :identifier => nil, :params => {})
         Washbullet::Pushable::Link.push(self, receiver, identifier, params)
       end
 
-      def push_file(receiver: nil, identifier: nil, params: {})
+      def push_file(:receiver => nil, :identifier => nil, :params => {})
         Washbullet::Pushable::File.push(self, receiver, identifier, params)
       end
 
